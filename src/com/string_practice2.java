@@ -12,7 +12,7 @@ public class string_practice2 {
 
 		// reverseVerticalString(str1);
 		
-		System.out.println(findString(str1, "example"));
+		// System.out.println(findString(str1, "example"));
 
 	}
 
@@ -46,12 +46,21 @@ public class string_practice2 {
 
 	public static void reverseVerticalString(String str) {
 
-		String words = "";
+		String currentWord = "";
 		
-		for(int i = 0; i < str.length(); i++) {
+		for(int i = str.length()-1; i >= 0; i--) {
+			
+			String currentChar = str.substring(i, i+1);
+			
+			if(currentChar.equals(" ")) {
+				System.out.println(currentWord);
+				currentWord = "";
+			} else {
+				currentWord = currentChar + currentWord;
+			}
 			
 		}
-
+			System.out.println(currentWord);
 	}
 
 	public static boolean findString(String str1, String searchTerm) {
