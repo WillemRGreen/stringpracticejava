@@ -6,32 +6,27 @@ public class string_practice2 {
 
 	public static void main(String[] args) {
 
-		//countWords(str1);
+		System.out.println(countWords(str1));
 		
 		//verticalString(str1);
 		
-		reverseVerticalString(str1);
+		//reverseVerticalString(str1);
+		
+		
 
 	}
 
-	public static void countWords(String s) {
+	public static int countWords(String str) {
 
 		int wordCount = 0;
 
-		boolean word = false;
-		int endOfLine = s.length() - 1;
-
-		for (int i = 0; i < s.length(); i++) {
-			if (Character.isLetter(s.charAt(i)) && i != endOfLine) {
-				word = true;
-			} else if (!Character.isLetter(s.charAt(i)) && word) {
-				wordCount++;
-				word = false;
-			} else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
-				wordCount++;
+		for (int i = 0; i < str.length(); i++) {
+			if(str.substring(i, i+1).equals("\s")) {
+				wordCount += str.substring(i, i+1).equals("\s") ? 1 : 0 ;
 			}
+			wordCount += wordCount > 0 ? 1 : 0;
 		}
-		System.out.println(wordCount);
+		return wordCount;
 	}
 	
 	public static void verticalString(String str) {
@@ -49,5 +44,11 @@ public class string_practice2 {
 		}
 		
 	}
-
-}
+	
+	public static void findString(String str) {
+		
+		
+		
+	}
+		
+	}
