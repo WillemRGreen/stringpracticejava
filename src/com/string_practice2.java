@@ -21,11 +21,11 @@ public class string_practice2 {
 		int wordCount = 0;
 
 		for (int i = 0; i < str.length(); i++) {
-			if(str.substring(i, i+1).equals("\s")) {
 				wordCount += str.substring(i, i+1).equals("\s") ? 1 : 0 ;
-			}
-			wordCount += wordCount > 0 ? 1 : 0;
+			
 		}
+		wordCount += wordCount > 0 ? 1 : 0; 
+		
 		return wordCount;
 	}
 	
